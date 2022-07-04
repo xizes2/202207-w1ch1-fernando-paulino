@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta 4</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>CONECTA_4</h1>
+    
+    <div id="system_message">
+        <p>Welcome to CONECTA_4 game!</p>
+        <p>The game starts with a blank panel with 42 positions, organized in 7 columns of 6 positions each.</p>
+        <p>The RED player is the first one to play, the BLUE player comes right after.</p>
+        <p>The player must choose a column to put his piece, the piece will always be put on the bottom of the column where the position is not taken by another piece.</p>
+        <p>To win, the player must connect 4 pieces of it's own color in any direction (diagonals are good too).</p>
+        <p>GOOD LUCK!!</p>
+        <fieldset>
+            <legend>Select your opponent:</legend>
+            <input type="radio" name="opponent" id="opponent-player" value="Player 2">
+            <label for="opponent-player">Player 2</label>
+            <input checked type="radio" name="opponent" id="opponent-computer" value="Computer">
+            <label for="opponent-computer">Computer</label>
+        </fieldset>
+        <button id="start_game_button" type="button" value="START GAME" onclick="startGameChangeDom()">START GAME</button>
+    </div>
+
+    <section id="game_interface">
+    
+        <div id="central_session">
+            <div class="players one">Player 1
+                <div class="score_container player1">Score: <p class="score_number p1">0</p>
+                </div>
+            </div>
+            <div id="game_body">
+                <div id="c0" class="column">
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                </div>
+                <div id="c1" class="column">
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                </div>
+                <div id="c2" class="column">
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                </div>
+                <div id="c3" class="column">
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                </div>
+                <div id="c4" class="column">
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                </div>
+                <div id="c5" class="column">
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                </div>
+                <div id="c6" class="column">
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                    <div class="column_item"></div>
+                </div>
+            </div>
+
+            <div class="players two">
+                <div class="score_container player2">Score: <p class="score_number p2">0</p>
+                </div>
+            </div>
+
+        </div>
+        
+        <div id="restart_end_buttons">
+            <input id="restart_button" type="button" value="RESTART" onclick="restartGame()">
+            <input id="end_button" type="button" value="END" onclick="endGame()">
+        </div>
+
+    </section>
+    
+    <div id="end_page">
+        <p>Thanks for playing!</p>
+        <input id="play_again_button" type="button" value="PLAY AGAIN" onclick="playAgain()">
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
